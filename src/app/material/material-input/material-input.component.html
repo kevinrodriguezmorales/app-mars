@@ -1,0 +1,26 @@
+<h3>Input básicos</h3>
+<div>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Nombre" [(ngModel)]="user.name" (keyup)="onKeyUp($event)" (blur)="onBlur($event)">
+    </mat-form-field>
+</div>
+<pre>
+    {{ user | json }}
+</pre>
+
+<h3>Prefijos y sufijos</h3>
+<div>
+    <mat-form-field>
+        <span matPrefix>&nbsp;+1&nbsp;</span>
+        <input matInput type="text" placeholder="Teléfono">
+        <span matSuffix> 00&nbsp;</span>
+    </mat-form-field>
+</div>
+
+<h3>Help me</h3>
+<div>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Dirección">
+        <mat-hint>Calle y número de domicilio</mat-hint>
+    </mat-form-field>
+</div>

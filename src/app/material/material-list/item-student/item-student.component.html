@@ -1,0 +1,8 @@
+<mat-list-item (click)="onClick(student)">
+    <img *ngIf="student.photo !== '' && student.photo !== undefined else defaultPhoto" matListItemAvatar [src]="student.photo" alt="{{ student.name }}">
+    <ng-template #defaultPhoto>
+        <mat-icon matListItemIcon>account_circle</mat-icon>
+    </ng-template>
+    <span matListItemTitle>{{ student.name }}</span>
+    <span matListItemLine>{{ student.city }}</span>
+</mat-list-item>
